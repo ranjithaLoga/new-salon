@@ -23,4 +23,9 @@ router.post('./stylist/mod');
 //add Stylist
 router.post('/stylist/add', stylist.add);
 
+//add booking
+router.post('./bookings/add', booking.add);
+
+
+
 module.exports = router;

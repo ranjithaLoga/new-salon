@@ -25,5 +25,17 @@ exports.modSalon=(query,cb) =>{
     });
 };
 
-
+exports.addSalon=(query,cb)=>{
+    var queryObj={};
+    queryObj.name= query.name;
+    queryObj.location=query.location;
+    console.log(queryObj);
+    Salon.create(queryObj).then((dat) => {
+        console.log(data.dataValues);
+        cb(data.dataValues);
+    }).catch((err) => {
+        cb(err);
+    })
+    
+};
 

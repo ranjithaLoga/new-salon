@@ -11,6 +11,9 @@ router.get('/salon/list', salon.list);
 //update salon
 router.post('/salon/mod', salon.update);
 
+//add Salon
+router.post('/salon/add', salon.add);
+
 //get stylist
 router.get('/stylist/list', stylist.list);
 

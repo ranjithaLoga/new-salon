@@ -33,3 +33,17 @@ exports.update = (req, res, next) => {
         });
     });
 };
+
+exports.add= (req,res, next)=>{
+    var query={};
+    query.name=req.body.name;
+    query.location=req.body.location;
+
+    Salon.addSalon(query,(ret)=>{
+
+        if (ret) res.json({
+            status:"success adding salon",
+            salonId:ret.id
+        })
+    });
+}

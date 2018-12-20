@@ -4,6 +4,7 @@ var express = require('express');
 var router = express.Router();
 var salon = require('../Controllers/salonController');
 var stylist = require('../Controllers/stylistController');
+var booking = require('../Controllers/bookingController');
 
 //salon list
 router.get('/salon/list', salon.list);
@@ -24,7 +25,10 @@ router.post('./stylist/mod');
 router.post('/stylist/add', stylist.add);
 
 //add booking
-router.post('./bookings/add', booking.add);
+router.post('/booking/add', booking.add);
+
+//get stylist booking
+router.get('/bookings/stylist/:id', booking.getOneBooking );
 
 
 

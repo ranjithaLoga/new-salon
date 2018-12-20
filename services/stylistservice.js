@@ -13,21 +13,6 @@ exports.getAllStylist = (query, cb) => {
     });
 };
 
-/*exports.addStylist=(query,cb)=>{
-    var queryObj = {};
-    queryObj.name = query.name;
-    queryObj.location = query.location;
-    queryObj.number = query.number;
-    queryObj.experiance = query.experiance;
-
-    var statement= "INSERT INTO `stylists` (`id`, `name`, `location`, `number`, `experiance`) VALUES ('3', 'john', 'col', '0111', '4');";
-
-    sequelize.query(statement).then((data)=>{
-        cb(data);
-    });
-}
-*/
-
 
 exports.modStylist = (query, cb) => {
     var queryObj = {};

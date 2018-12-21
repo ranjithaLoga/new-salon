@@ -43,7 +43,7 @@ var Booking = sequelize.define('booking', {
 
 // Booking.belongsTo(Salon)
 
-sequelize.sync({ force: true }).then(() => {
+sequelize.sync({ force: false }).then(() => {
     console.log('Database & table booking created!')
 })
 console.log("booking page");

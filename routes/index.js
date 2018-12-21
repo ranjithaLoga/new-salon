@@ -30,6 +30,9 @@ router.post('/booking/add', booking.add);
 //get stylist booking
 router.get('/bookings/stylist/:id', booking.getOneBooking );
 
+//delete Booking
+router.delete('/bookings/delete/:id', booking.deleteBooking);
+
 
 
 module.exports = router;

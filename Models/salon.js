@@ -20,7 +20,7 @@ var Salon = sequelize.define('salon', {
     },
 
 });
-sequelize.sync({ force: true }).then(() => {
+sequelize.sync({ force: false }).then(() => {
     console.log('Database & table salon created!')
 })
 console.log("salon page");

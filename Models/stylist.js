@@ -30,7 +30,7 @@ var Stylist = sequelize.define('stylist', {
 
 });
 
-sequelize.sync({ force: true }).then(() => {
+sequelize.sync({ force: false }).then(() => {
     console.log('Database & table stylist created!')
 })
 console.log("stylist page");

@@ -39,3 +39,11 @@ exports.getOneBooking = (req, res, next) => {
         // }
     })
 };
+
+exports.deleteBooking = (req,res, next) => {
+    var booking_id = req.params.id;
+
+    Booking.deleteBookingStylist(booking_id, (rows) => {
+        res.json(rows);
+    })
+};

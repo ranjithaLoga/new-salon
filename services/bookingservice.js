@@ -2,6 +2,7 @@
 var sequelize = require('../common/mysql');
 var Booking = require('../Models/booking');
 var Salon = require('../Models/salon');
+var Stylist= require('../Models/stylist');
 
 // functions
 
@@ -40,4 +41,15 @@ console.log(statement)
     sequelize.query(statement, { raw: true, replacements: { stylist_id: stylistId }}).then((data) => {
         cb(data);
     }).catch((err)=>{cb(err);});
-}
+};
+
+exports.deleteBookingStylist = (id,cb) => {
+    var bookingId= id;
+    console.log("bookingid");
+    var statement= "DELETE FROM bookings WHERE id=:booking_id";
+
+    console.log(statement);
+    sequelize.query(statement, { raw: true, replacements: { booking_id: bookingId }}).then((data) => {
+        cb(data);
+    }).catch((err) => {cb(err);});
+};
